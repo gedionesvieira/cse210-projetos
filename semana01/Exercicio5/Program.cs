@@ -13,6 +13,12 @@ class Program
 
        ExibirResultado(nomeUsuario, numeroAoQuadrado);
     }
+
+    private static void ExibirMensagemBoasVindas()
+    {
+        throw new NotImplementedException();
+    }
+
     static void ExibirmensagemBoasVindas()
     {
         Console.WriteLine("Bem-vindo ao programa!");
