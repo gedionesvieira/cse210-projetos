@@ -1,0 +1,29 @@
+namespace PedidosOnline;
+
+public class Address
+{
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _country;
+
+    public Address(string street, string city, string state, string country)
+    {
+        _street = street;
+        _city = city;
+        _state = state;
+        _country = country;
+    }
+
+    public bool IsInUSA()
+    {
+        return _country.Trim().Equals("USA", StringComparison.OrdinalIgnoreCase)
+            || _country.Trim().Equals("United States", StringComparison.OrdinalIgnoreCase)
+            || _country.Trim().Equals("Estados Unidos", StringComparison.OrdinalIgnoreCase);
+    }
+
+    public override string ToString()
+    {
+        return $"{_street}\n{_city}, {_state}\n{_country}";
+    }
+}
